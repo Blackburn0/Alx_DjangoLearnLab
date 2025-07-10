@@ -1,1 +1,2 @@
-Book.objects.delete
+from bookshelf.models import Book
+book.delete()
