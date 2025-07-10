@@ -1,1 +1,1 @@
-Book.objects.get
+Book.objects.get(1984)
