@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import permission_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import DetailView, CreateView
 from django.contrib.auth.decorators import user_passes_test, permission_required
