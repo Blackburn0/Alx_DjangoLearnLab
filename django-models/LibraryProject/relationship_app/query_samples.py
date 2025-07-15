@@ -1,5 +1,2 @@
-Book.objects.get(author="hamzat")
-
-Book.objects.all()
-
-Library.objects.get(librarian)
+Library.objects.get(name=library_name)
+books.all()
