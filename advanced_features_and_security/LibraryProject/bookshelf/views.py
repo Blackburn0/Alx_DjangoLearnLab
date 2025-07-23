@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseForbidden
 from django.db.models import Q
 from bookshelf.models import Book
-from bookshelf.forms import SearchForm
+from bookshelf.forms import ExampleForm
 
 @permission_required('bookshelf.can_view', raise_exception=True)
 def book_list(request):
@@ -34,7 +34,7 @@ def book_delete(request, pk):
     return render(request, 'book_confirm_delete.html', {'book': book})
 
 def search_books(request):
-    form = SearchForm(request.GET or None)
+    form = ExampleForm(request.GET or None)
     books = []
     if form.is_valid():
         query = form.cleaned_data.get('query')
