@@ -1,0 +1,1 @@
+# This is django project setup
