@@ -17,3 +17,20 @@ The following groups are configured:
 
 ### Enforcing Permissions
 Permissions are enforced in views using the `@permission_required` decorator. For example:
+
+# Security Measures
+
+## Settings
+- `DEBUG` is set to `False` in production to prevent sensitive data exposure.
+- `SECURE_BROWSER_XSS_FILTER`, `X_FRAME_OPTIONS`, and `SECURE_CONTENT_TYPE_NOSNIFF` are configured to protect against XSS and clickjacking.
+- `CSRF_COOKIE_SECURE` and `SESSION_COOKIE_SECURE` ensure cookies are sent over HTTPS.
+
+## Templates
+- All forms include `{% csrf_token %}` to protect against CSRF attacks.
+
+## Views
+- User inputs are validated using Django forms.
+- Queries are parameterized using Django ORM to prevent SQL injection.
+
+## Content Security Policy (CSP)
+- Configured to restrict content sources to `'self'` and inline scripts/styles.
