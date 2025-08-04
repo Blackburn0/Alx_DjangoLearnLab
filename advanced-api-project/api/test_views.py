@@ -65,3 +65,6 @@ class BookAPITestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data[0]['title'], self.book1.title)
         self.assertEqual(response.data[1]['title'], self.book2.title)
+
+
+        self.client.login
