@@ -4,6 +4,8 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import Book
 from .serializers import BookSerializer
 
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
+
 # ListView for retrieving all books
 class BookListView(generics.ListAPIView):
     queryset = Book.objects.all()
