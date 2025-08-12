@@ -1,7 +1,7 @@
-# blog/models.py
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 User = get_user_model()
 
@@ -11,6 +11,8 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="posts"
     )
+    published_date = models.DateTimeField(auto_now_add=True)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
