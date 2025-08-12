@@ -39,7 +39,7 @@ This project is a simple blog application built using Django. It includes featur
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Blackburn0/Alx_DjangoLearnLab.git
    cd django_blog
 
 ---
