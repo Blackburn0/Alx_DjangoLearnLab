@@ -28,6 +28,10 @@ class PostForm(forms.ModelForm):
             raise forms.ValidationError("Title cannot be empty.")
         return title
 
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'content', 'tags']  # Include tags
 
 class CommentForm(forms.ModelForm):
     class Meta:
