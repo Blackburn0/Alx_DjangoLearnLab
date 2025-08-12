@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Comment
 
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
@@ -27,3 +27,9 @@ class PostForm(forms.ModelForm):
         if not title:
             raise forms.ValidationError("Title cannot be empty.")
         return title
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['content']

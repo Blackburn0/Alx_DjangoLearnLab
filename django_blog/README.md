@@ -23,6 +23,11 @@ This project is a simple blog application built using Django. It includes featur
    - Custom HTML templates for authentication and blog pages.
    - Static files (CSS, JavaScript) for styling and interactivity.
 
+5. **Comment System**:
+   - Authenticated users can add comments to blog posts.
+   - Comment authors can edit or delete their comments.
+   - Comments are displayed under the corresponding blog post.
+
 ---
 
 ## Setup Instructions
@@ -36,3 +41,21 @@ This project is a simple blog application built using Django. It includes featur
    ```bash
    git clone <repository-url>
    cd django_blog
+
+---
+
+## Comment System
+
+### Features
+- Authenticated users can add comments to blog posts.
+- Comment authors can edit or delete their comments.
+- Comments are displayed under the corresponding blog post.
+
+### How to Use
+1. Navigate to a blog post detail page.
+2. If logged in, use the comment form to add a comment.
+3. Edit or delete your comments using the provided links.
+
+### Permissions
+- Only authenticated users can add comments.
+- Only the comment author can edit or delete their comments.
