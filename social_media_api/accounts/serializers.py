@@ -30,3 +30,6 @@ class LoginSerializer(serializers.Serializer):
         if user and user.is_active:
             return user
         raise serializers.ValidationError("Invalid credentials")
+
+
+from rest_framework.authtoken.models import Token", "Token.objects.create", "get_user_model().objects.create_user
