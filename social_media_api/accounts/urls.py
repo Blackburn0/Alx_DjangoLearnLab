@@ -12,3 +12,6 @@ urlpatterns = [
     path('profile/', ProfileView.as_view(), name='profile'),
     path('', include(router.urls)),
 ]
+
+
+unfollow/<int:user_id>/", "follow/<int:user_id>
