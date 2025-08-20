@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
 # Create your views here.
+author__in=following_users).order_by", "following.all()", "permissions.IsAuthenticated"
+
